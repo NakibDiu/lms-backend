@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification - Easy Learning</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .verification-code {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+            margin-top: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Hello, <%- user.name %> Welcome to Easy Learning!</h2>
+        <p>Thank you for choosing Easy Learning. To complete your registration, please use the following verification
+            code:</p>
+        <div class="verification-code">
+            <%- activationCode %>
+        </div>
+        <p>If you didn't request this code, please ignore this email. The code is valid for a limited time.</p>
+        <div class="footer">
+            <p>This email was sent from Easy Learning. Please do not reply to this email.</p>
+        </div>
+    </div>
+</body>
+
+</html>
